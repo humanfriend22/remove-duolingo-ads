@@ -1,0 +1,24 @@
+{
+    "name": "Remove Duolingo Ads",
+    "version": "1.0.0",
+    "description": "removes Duolingo advertisments",
+    "manifest_version": 3,
+    "author": "Human Friend",
+    "action": {
+        "default_popup": "src/popup/index.html",
+        "default_title": "Remove Ads"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.duolingo.com/*"
+            ],
+            "css": [
+                "src/app/style.css"
+            ],
+            "js": [
+                "src/app/script.js"
+            ]
+        }
+    ]
+}
